@@ -1,0 +1,91 @@
+body
+    font-family: sans-serif
+    background: url("../img/bg.webp")
+    background-size: cover
+    position: relative
+    padding-bottom: 320px
+
+.container
+    max-width: 920px
+    margin: 40px auto
+
+.show-full-deck
+    display: grid
+    grid-template-columns: repeat(13,1fr)
+    grid-row-gap: 12px
+
+.single-card
+    background: #fff
+    position: relative
+    padding: 8px 8px 0
+    margin: 8px
+    border-radius: 8px
+    font-size: 16px
+    display: inline-flex
+    justify-content: center
+    flex-direction: column
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16)
+    .suit
+        svg
+            max-width: 36px
+            height: 48px
+            display: block
+            margin: 0 auto
+    p
+        margin: 4px auto
+        display: inline-block
+        text-align: center
+
+.drawed-cards
+    padding-top: 12px
+    background: rgba(0,0,0,.56)
+    border: 2px solid #000
+    position: fixed
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    width: 920px
+    min-height: 120px
+    display: flex
+    border-radius: 8px
+    justify-content: center
+    align-items: center
+    
+    .card-container
+        display: grid
+        grid-template-columns: repeat(10,1fr)
+
+    .single-card
+        opacity: 1
+        pointer-events: none
+         
+.empty-slot
+    border: 1px solid #ddd
+    border-radius: 4px
+    width: 64px
+    height: 92px
+    transition: all .4s ease-in-out
+    background: rgba(0,0,0,.32)
+
+.slot-hover
+    border: 1px solid #3f0
+    background: #33ff0038
+    .card-container
+        pointer-events: none
+
+.hide
+    opacity: 0
+
+.sort
+    position: absolute
+    left: 8px
+    bottom: 8px
+
+.btn
+    cursor: pointer
+    background: #215f35
+    color: #ffffff
+    border: 2px solid #fff
+    outline: none
+    padding: 8px 24px
+    border-radius: 50px
